@@ -1,0 +1,28 @@
+<h1>Listado de Data</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr class="text-center">
+            <th>ID</th>
+            <th>Correo</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Número de Documento</th>
+            <th>Número de Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of persons">
+            <td class="text-center">{{p.id}}</td>
+            <td>{{p.email}}</td>
+            <td>{{p.first_name}}</td>
+            <td>{{p.last_name}}</td>
+            <td>{{p.n_document}}</td>
+            <td>{{p.phone_number}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-end mt-5">
+    <button class="btn btn-primary" (click)="printInConsole()">Mostrar en Consola</button>
+</div>
